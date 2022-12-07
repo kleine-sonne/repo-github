@@ -91,5 +91,14 @@ git remote add origin https://github.com/kleine-sonne/repo-github.git
 #проверка удаленного репозитория
 git remote -v
 
-# клонировать репозиторий/загрузить очередные изменения из удаленного репо
+# клонировать репозиторий
 git clone https://github.com/kleine-sonne/repo-github.git
+
+# загрузить очередные изменения из удаленного репо
+git fetch origin
+
+# сливание веток ИЗ/В
+git merge origin/main
+
+# загрузить из origin + слить с локальной веткой main
+git pull origin main
