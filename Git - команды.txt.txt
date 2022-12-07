@@ -1,0 +1,93 @@
+
+GIT-команды
+
+1. проверка версии git
+git --version
+
+2. если не стоит, установить
+
+3. для mac/linux установить Git Kraken (это вместо Git Gui Windows)
+https://www.gitkraken.com
+
+4. команды терминала
+git config --global user.name "Irina Bolkunova"
+git config --global user.email "kleine-sonne@yandex.ru"
+git config --global color.ui auto
+
+git config --list
+
+# показать список папок и файлов в текущей директории (list)
+ls
+
+# изменить путь
+cd Down<tab> === система сама подставит полное название папки
+cd ..
+
+# создать папку
+mkdir TestDir
+
+# создать файд
+touch test.txt
+
+# копирование файла
+cp test.txt test_copy.txt
+
+# переименование файла
+mv test.txt test_original.txt
+
+# запись в файл
+echo "Hello" > test-original.txt
+
+# открыть файл
+cat test-original.txt
+
+# удалить файл
+rm -R test-original.txt
+где -R рекурсивное удаление со всем вложенным
+
+Репозитории:
+- локальные
+- удаленные
+
+# создать репозиторий
+cd desktop
+mkdir repo
+cd repo
+git init
+
+# добавляем файл с описанием репозитория
+touch README.md
+echo "first test repository" > README.md
+
+# комитим в локальный репозиторий и пушим в удаленный
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/kleine-sonne/repo-github.git
+git push -u origin main
+
+# удалить локальный репозиторий (из нужной папки)
+rm -rf .git
+
+# не покажет файлы
+ls 
+
+# покажет скрытые файлы гита
+ls -a 
+
+# покажет есть ли комиты, изменения и т.д.
+git status
+
+# в репозитории желательно создать файл README.md
+# куда вписать наименование репозитория
+
+# создать репозиторий на github: repo-github
+
+#настраиваем синхронизация локального гита и удаленного репозитория
+git remote add origin https://github.com/kleine-sonne/repo-github.git
+
+#проверка удаленного репозитория
+git remote -v
+
+# клонировать репозиторий
+git clone https://github.com/kleine-sonne/repo-github.git
