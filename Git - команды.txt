@@ -42,8 +42,10 @@ echo "Hello" > test-original.txt
 cat test-original.txt
 
 # удалить файл
-rm -R test-original.txt
-где -R рекурсивное удаление со всем вложенным
+rm test-original.txt
+
+# Удалить папку -R рекурсивное удаление со всем вложенным
+rm -R TestDir
 
 Репозитории:
 - локальные
@@ -89,5 +91,5 @@ git remote add origin https://github.com/kleine-sonne/repo-github.git
 #проверка удаленного репозитория
 git remote -v
 
-# клонировать репозиторий
+# клонировать репозиторий/загрузить очередные изменения из удаленного репо
 git clone https://github.com/kleine-sonne/repo-github.git
