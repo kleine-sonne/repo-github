@@ -61,11 +61,14 @@ git init
 touch README.md
 echo "first test repository" > README.md
 
+# коннектим удаленный репозиторий
+git remote add origin https://github.com/kleine-sonne/repo-github.git
+
+
 # комитим в локальный репозиторий и пушим в удаленный
 git add README.md
 git commit -m "first commit"
 git branch -M main
-git remote add origin https://github.com/kleine-sonne/repo-github.git
 git push -u origin main
 
 # удалить локальный репозиторий (из нужной папки)
