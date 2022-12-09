@@ -127,5 +127,11 @@ git push 
 
 # !!! GIT не любит пустые папки
 touch images/.gitkeep
+# после этого добавляем в комит, коммитим
 
 # игнорировать файлы
+touch .gitignore
+git commit -m "add git ignore"
+# добавляем название файла например "config" чтобы он не добавлялся в индекс
+echo "config" > .gitignore
+cat .gitignore
